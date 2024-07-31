@@ -2,6 +2,8 @@ package com.app.blog.persistence.entity;
 
 import jakarta.persistence.*;
 
+import java.util.Set;
+
 @Entity
 @Table(name = "users")
 public class UserEntity {
@@ -12,15 +14,26 @@ public class UserEntity {
     private String password;
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
     private BlogEntity blog;
+    @ManyToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinTable(name = "users_roles",
+            joinColumns = {
+                    @JoinColumn(name = "user_id")
+            },
+            inverseJoinColumns = {
+                    @JoinColumn(name = "role_id")
+            }
+    )
+    private Set<RoleEntity> role;
 
     public UserEntity() {
     }
 
-    public UserEntity(long user_id, String userName, String password, BlogEntity blog) {
+    public UserEntity(long user_id, String userName, String password, BlogEntity blog, Set<RoleEntity> role) {
         this.user_id = user_id;
         this.userName = userName;
         this.password = password;
         this.blog = blog;
+        this.role = role;
     }
 
     public long getUserId() {
@@ -53,5 +66,13 @@ public class UserEntity {
 
     public void setBlog(BlogEntity blog) {
         this.blog = blog;
+    }
+
+    public Set<RoleEntity> getRole() {
+        return role;
+    }
+
+    public void setRole(Set<RoleEntity> role) {
+        this.role = role;
     }
 }
