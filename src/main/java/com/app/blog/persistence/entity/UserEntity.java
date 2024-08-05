@@ -9,7 +9,7 @@ import java.util.Set;
 public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long user_id;
+    private long id;
     private String userName;
     private String password;
     @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
@@ -28,8 +28,8 @@ public class UserEntity {
     public UserEntity() {
     }
 
-    public UserEntity(long user_id, String userName, String password, BlogEntity blog, Set<RoleEntity> role) {
-        this.user_id = user_id;
+    public UserEntity(long id, String userName, String password, BlogEntity blog, Set<RoleEntity> role) {
+        this.id = id;
         this.userName = userName;
         this.password = password;
         this.blog = blog;
@@ -37,11 +37,11 @@ public class UserEntity {
     }
 
     public long getUserId() {
-        return user_id;
+        return id;
     }
 
     public void setUserId(long user_id) {
-        this.user_id = user_id;
+        this.id = user_id;
     }
 
     public String getUserName() {
