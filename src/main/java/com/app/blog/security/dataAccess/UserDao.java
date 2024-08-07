@@ -7,4 +7,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserDao extends JpaRepository<UserEntity, Long> {
     UserEntity findByUserName(String userName);
+
+    void deleteByUserName(String userName);
+
+    UserEntity getByUserName(String userName);
 }
