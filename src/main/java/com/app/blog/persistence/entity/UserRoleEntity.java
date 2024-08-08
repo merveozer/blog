@@ -1,6 +1,6 @@
 package com.app.blog.persistence.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "users_roles")

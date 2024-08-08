@@ -4,11 +4,10 @@ import com.app.blog.user.interfaces.datamodel.UserBo;
 import com.app.blog.user.interfaces.service.CreateUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/api/v1")
 public class CreateUserApi implements CreateUserService {
     private CreateUserService userService;
 
@@ -20,7 +19,7 @@ public class CreateUserApi implements CreateUserService {
 
 
     @Override
-    @PostMapping("/users")
+    @PostMapping("/user")
     public ResponseEntity<UserBo> saveUser(@RequestBody UserBo user) {
         return userService.saveUser(user);
     }

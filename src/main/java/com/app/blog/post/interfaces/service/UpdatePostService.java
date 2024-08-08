@@ -1,4 +1,8 @@
 package com.app.blog.post.interfaces.service;
 
-public class UpdatePostService {
+import com.app.blog.post.interfaces.datamodel.PostBo;
+import org.springframework.http.ResponseEntity;
+
+public interface UpdatePostService {
+    ResponseEntity<PostBo> updatePost(PostBo postBo);
 }

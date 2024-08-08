@@ -2,7 +2,7 @@ package com.app.blog.security.entity;
 
 import com.app.blog.persistence.entity.UserEntity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
