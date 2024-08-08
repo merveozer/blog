@@ -4,11 +4,11 @@ import com.app.blog.user.interfaces.service.DeleteUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/api/v1")
+@CrossOrigin(origins = "http://localhost:8080")
 public class DeleteUserApi {
     private DeleteUserService userService;
 
@@ -18,7 +18,7 @@ public class DeleteUserApi {
         this.userService = userService;
     }
 
-    @DeleteMapping("/users/{userName}")
+    @DeleteMapping("/{userName}")
     public ResponseEntity<String>  deleteByUserName(@PathVariable String userName) {
         boolean isDeleted = userService.deleteByUserName(userName);
         if (isDeleted) {

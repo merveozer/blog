@@ -1,4 +1,6 @@
 package com.app.blog.post.interfaces.service;
 
-public class RemovePostService {
+public interface RemovePostService {
+
+
 }
