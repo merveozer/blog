@@ -26,6 +26,22 @@ This project is a simple backend API for managing blog posts. It allows users to
 - **Docker**: Dockerize the application
 - **Caching**: Implement caching for improved performance
 
+# Swagger UI
+
+This project uses Swagger UI to provide REST API documentation. Swagger UI allows you to visualize and interact with the API endpoints.
+
+## Access
+
+You can access Swagger UI and the OpenAPI documentation at the following URLs:
+
+- **Swagger UI**: [http://localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html)
+- **OpenAPI Documentation**: [http://localhost:8080/v3/api-docs](http://localhost:8080/v3/api-docs)
+
+## Default Port
+
+The application runs on **port 8080** by default.
+
+
 ## Setup Guide
 
 1. **Clone the Repository**
