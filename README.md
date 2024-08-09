@@ -40,6 +40,23 @@ You can access Swagger UI and the OpenAPI documentation at the following URLs:
 
 The application runs on **port 8080** by default.
 
+## Docker Commands
+
+### Creating and Starting Docker Images
+
+To build and start your application using Docker Compose, run:
+
+```bash
+   docker compose -f docker-compose.yaml up --build -d
+
+### Stopping and Removing Docker Containers
+   docker compose -f docker-compose.yaml down
+
+### Restarting Docker Containers
+docker compose -f docker-compose.yaml restart
+
+### Restarting a Specific Service
+docker compose -f docker-compose.yaml restart <service_name>
 
 ## Setup Guide
 
