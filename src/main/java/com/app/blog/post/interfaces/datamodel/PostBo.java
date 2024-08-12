@@ -6,16 +6,25 @@ import com.app.blog.tag.datamodel.TagBo;
 import java.util.Set;
 
 public class PostBo {
+    private long id;
     private BlogBo blogBo;
     private String title;
     private String text;
     private Set<TagBo> tags;
 
-    public PostBo(BlogBo blogBo, String title, String text, Set<TagBo> tags) {
+    public PostBo(Long id, BlogBo blogBo, String title, String text, Set<TagBo> tags) {
+        this.id = id;
         this.blogBo = blogBo;
         this.title = title;
         this.text = text;
         this.tags = tags;
+    }
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 
     public BlogBo getBlogBo() {
