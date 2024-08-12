@@ -58,10 +58,3 @@ docker compose -f docker-compose.yaml restart
 ### Restarting a Specific Service
 docker compose -f docker-compose.yaml restart <service_name>
 
-## Setup Guide
-
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/merveozer/blog.git
-   cd blog
-
