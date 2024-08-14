@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class CreatePostImpl implements CreatePostService {
     private PostDao postDao;
-    PostEntityMapper mapper;
+    private PostEntityMapper mapper;
     @Autowired
     public CreatePostImpl(PostDao postDao, PostEntityMapper mapper) {
         this.postDao = postDao;
