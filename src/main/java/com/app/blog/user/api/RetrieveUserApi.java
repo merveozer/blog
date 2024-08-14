@@ -1,7 +1,6 @@
 package com.app.blog.user.api;
 
 import com.app.blog.user.interfaces.datamodel.UserBo;
-import com.app.blog.user.interfaces.service.CreateUserService;
 import com.app.blog.user.interfaces.service.RetrieveUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

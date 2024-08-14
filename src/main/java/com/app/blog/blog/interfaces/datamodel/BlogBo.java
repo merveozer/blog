@@ -6,8 +6,8 @@ import com.app.blog.user.interfaces.datamodel.UserBo;
 import java.util.List;
 
 public class BlogBo {
-    UserBo user;
-    List<PostBo> post;
+    private UserBo user;
+    private List<PostBo> post;
 
     public BlogBo(UserBo user, List<PostBo> post) {
         this.user = user;
