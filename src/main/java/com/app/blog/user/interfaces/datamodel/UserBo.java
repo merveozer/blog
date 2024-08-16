@@ -6,7 +6,8 @@ public class UserBo {
     private String userName;
     private String password;
     private BlogBo blog;
-
+    public UserBo() {
+    }
     public UserBo(String userName, String password, BlogBo blog) {
         this.userName = userName;
         this.password = password;

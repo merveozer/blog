@@ -11,6 +11,8 @@ public class PostBo {
     private String title;
     private String text;
     private Set<TagBo> tags;
+    public PostBo() {
+    }
 
     public PostBo(Long id, BlogBo blogBo, String title, String text, Set<TagBo> tags) {
         this.id = id;
