@@ -7,11 +7,14 @@ import java.util.List;
 
 public class BlogBo {
     private UserBo user;
-    private List<PostBo> post;
+    private List<PostBo> posts;
 
-    public BlogBo(UserBo user, List<PostBo> post) {
+    public BlogBo() {
+    }
+
+    public BlogBo(UserBo user, List<PostBo> posts) {
         this.user = user;
-        this.post = post;
+        this.posts = posts;
     }
 
     public UserBo getUser() {
@@ -22,11 +25,11 @@ public class BlogBo {
         this.user = user;
     }
 
-    public List<PostBo> getPost() {
-        return post;
+    public List<PostBo> getPosts() {
+        return posts;
     }
 
-    public void setPost(List<PostBo> post) {
-        this.post = post;
+    public void setPosts(List<PostBo> posts) {
+        this.posts = posts;
     }
 }
